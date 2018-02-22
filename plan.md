@@ -17,17 +17,17 @@
         * Action creators
         * Action names
 * Back-end
-    * Database
-        * User Table
-            * id (serial)
-            * auth0_sub
-            * name
-            * email
-            * picture
-        * Queries (Massive)
-            * Look up user by auth0_id
-            * Add user
-            * Init
+    * ~~Database~~
+        * ~~User Table~~
+            * ~~id (serial)~~
+            * ~~auth0_sub~~
+            * ~~name~~
+            * ~~email~~
+            * ~~picture~~
+        * ~~Queries (Massive)~~
+            * ~~Look up user by auth0_id~~
+            * ~~Add user~~
+            * ~~Init~~
     * Server
         * Proxy in package.json
         * API endpoints
@@ -53,6 +53,6 @@
     * ~~auth0 client secret~~
 
 * Important Notes
-    * Put .env in .gitignore
+    * ~~Put .env in .gitignore~~
     * Restart servers whenever we change environment variables
     * Change package.json proxy for auth0 callback

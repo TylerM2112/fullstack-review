@@ -7,7 +7,7 @@ export default class Account extends Component {
         return (
             <div className="account">
                 <h1>Account</h1>
-                <img src={picture} />
+                <img src={picture} alt="profile"/>
                 <div><span className="bold">Name</span>: {name}</div>
                 <div><span className="bold">Email</span>: {email}</div>
                 <div><span className="bold">Amount</span>: {amount}</div>
