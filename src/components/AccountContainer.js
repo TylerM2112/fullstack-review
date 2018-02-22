@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Account from './Account';
 import axios from 'axios';
+import { connect } from 'react-redux';
 
-export default class AccountContainer extends Component {
+class AccountContainer extends Component {
     constructor() { 
         super();
         this.state = {
             loading: false,
-            user: null,
             message: null,
         };
     }
@@ -15,6 +15,7 @@ export default class AccountContainer extends Component {
     componentDidMount() {
         this.setState({ loading: true });
         axios.get('/api/user-data').then(response => {
+            console.log('HERE', response)
             this.setState({
                 user: response.data.user,
                 loading: false
@@ -28,7 +29,8 @@ export default class AccountContainer extends Component {
     }
     
     render() {
-        const { user, loading, message } = this.state;
+        const { loading, message } = this.state;
+        const { user } = this.props;
         return (
             <div className="account-container">
                 {loading && <div>Loading...</div>}
@@ -46,3 +48,14 @@ export default class AccountContainer extends Component {
         );
     }
 }
+
+const mapStateToProps = state => { 
+    return {
+        user: state.user
+    };
+}
+
+const connector = connect(mapStateToProps);
+const connectedAccountContainer = connector(AccountContainer);
+export default connectedAccountContainer;
+// export default connect(mapStateToProps)(AccountContainer);
