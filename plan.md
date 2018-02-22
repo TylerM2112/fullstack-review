@@ -1,12 +1,11 @@
 # Plan
 
 * Front-end
-    * Routing - BrowserRouter
+    * ~~Routing - BrowserRouter~~
     * Components
-        * Login
+        * ~~Login~~
             * Picture
             * Button
-            * Environment variables - dotenv
         * Account
             * User Info (redux)
             * Axios to fetch user info
@@ -35,7 +34,7 @@
                 * Ensure user is logged in (middleware)
             * Auth login (callback)
             * Logout
-* Packages
+* ~~Packages~~
     * dotenv
     * axios
     * redux
