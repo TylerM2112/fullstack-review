@@ -5,6 +5,7 @@ const session = require('express-session');
 const massive = require('massive');
 const authController = require('./controllers/authController');
 const userController = require('./controllers/userController');
+const checkUserStatus  = require('./middlewares/checkUserStatus');
 
 require('dotenv').config();
 
@@ -29,7 +30,15 @@ app.use(session({
 // app.use(express.static(`${__dirname}/../build`));
 
 app.get('/auth/callback', authController.connect);
-app.get('/api/user-data', userController.getUser);
+// app.get('/api/user-data', checkUserStatus, userController.getUser);
+app.get('/api/user-data', (req, res) => { 
+    res.json({
+        user: {
+            name: 'Tyler',
+            email: 'etc',
+        }
+    })
+})
 app.post('/api/logout', userController.logoutUser);
 
 

@@ -9,7 +9,7 @@
         * Account
             * ~~Presentational Component~~
             * User Info (redux)
-            * Axios to fetch user info
+            * ~~Axios to fetch user info~~
     * Redux
         * Store
         * ducks folder
@@ -31,10 +31,10 @@
     * Server
         * Proxy in package.json
         * API endpoints
-            * GET user data
-                * Ensure user is logged in (middleware)
+            * ~~GET user data~~
+                * ~~Ensure user is logged in (middleware)~~
             * Auth login (callback)
-            * Logout
+            * ~~Logout~~
 * ~~Packages~~
     * ~~dotenv~~
     * ~~axios~~
