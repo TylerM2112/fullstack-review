@@ -4,9 +4,10 @@
     * ~~Routing - BrowserRouter~~
     * Components
         * ~~Login~~
-            * Picture
-            * Button
+            * ~~Picture~~
+            * ~~Button~~
         * Account
+            * ~~Presentational Component~~
             * User Info (redux)
             * Axios to fetch user info
     * Redux
@@ -35,22 +36,21 @@
             * Auth login (callback)
             * Logout
 * ~~Packages~~
-    * dotenv
-    * axios
-    * redux
-    * react-redux
-    * react-router-dom
-    * massive
-    * express
-    * body-parser
-    * express-session
+    * ~~dotenv~~
+    * ~~axios~~
+    * ~~redux~~
+    * ~~react-redux~~
+    * ~~react-router-dom~~
+    * ~~massive~~
+    * ~~express~~
+    * ~~body-parser~~
+    * ~~express-session~~
 
-* Environment Variables
-    * Connection string
-    * Session Secret
-    * auth0 domain
-    * auth0 client ID
-    * auth0 client secret
+* ~~Environment Variables~~
+    * ~~Connection string~~
+    * ~~Session Secret~~
+    * ~~auth0 domain~~
+    * ~~auth0 client secret~~
 
 * Important Notes
     * Put .env in .gitignore
