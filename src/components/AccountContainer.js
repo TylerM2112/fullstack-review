@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Account from './Account';
 import axios from 'axios';
 import { connect } from 'react-redux';
+import { fetchData } from '../redux/reducer';
 
 class AccountContainer extends Component {
     constructor() { 
@@ -17,9 +18,9 @@ class AccountContainer extends Component {
         axios.get('/api/user-data').then(response => {
             console.log('HERE', response)
             this.setState({
-                user: response.data.user,
                 loading: false
             });
+            this.props.fetchData(response.data.user);
         }).catch(error => {
             this.setState({
                 message: 'You are unauthorized',
@@ -55,7 +56,11 @@ const mapStateToProps = state => {
     };
 }
 
-const connector = connect(mapStateToProps);
+const mapDispatchToProps = {
+    fetchData: fetchData
+}
+
+const connector = connect(mapStateToProps, mapDispatchToProps);
 const connectedAccountContainer = connector(AccountContainer);
 export default connectedAccountContainer;
 // export default connect(mapStateToProps)(AccountContainer);
