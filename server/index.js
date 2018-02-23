@@ -30,21 +30,8 @@ app.use(session({
 // app.use(express.static(`${__dirname}/../build`));
 
 app.get('/auth/callback', authController.connect);
-// app.get('/api/user-data', checkUserStatus, userController.getUser);
-app.get('/api/user-data', (req, res) => { 
-    res.json({
-        user: {
-            name: 'Tyler',
-            email: 'etc',
-        }
-    })
-})
+app.get('/api/user-data', checkUserStatus, userController.getUser);
 app.post('/api/logout', userController.logoutUser);
-
-
-
-
-
 
 
 
